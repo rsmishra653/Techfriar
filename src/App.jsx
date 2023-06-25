@@ -7,9 +7,9 @@ import './style.scss'
 function App() {
     return (
         <>
-            <div style={{ display: 'flex' }}>
+            <div className="main-wrapper">
                 <Navbar />
-                <div style={{ flex: '1 1 85%' }}>
+                <div className="wrapper">
                     <Header />
                     <Main />
                 </div>

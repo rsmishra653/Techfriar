@@ -582,3 +582,15 @@ button {
         justify-content: center;
     }
 }
+
+@media only screen and (max-width: 547px) {
+    .card-wrapper {
+        padding: 15px;
+        margin-inline: auto;
+        max-width: 90%;
+    }
+
+    .card-wrapper .tree-wrapper {
+        padding-inline: 0;
+    }
+}

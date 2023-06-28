@@ -1,19 +1,4 @@
-// variables
-$black: #000000;
-$white: #ffffff;
-$primary-color: #ed1b2e;
-$card-border: #bdbdbd;
-$card-bg: #e7e5e4;
-$text-default-color: #343341;
-$plus-color: #777676;
-$card-container: #f6f6f6;
-$card-connector-gray: #ececef;
-
-// Mixins
-@mixin icon-base-color {
-    filter: invert(55%) sepia(0%) saturate(2%) hue-rotate(248deg)
-        brightness(89%) contrast(85%);
-}
+@import './base.scss';
 
 // Global elements
 * {
@@ -188,7 +173,7 @@ button {
             color: #1e1f21;
         }
         button {
-            background: #1b1717 url(./assets/icons/icon-add-white.png) center
+            background: #1b1717 url(./../assets/icons/icon-add-white.png) center
                 no-repeat;
             background-size: 12px;
             position: relative;
@@ -303,7 +288,7 @@ button {
     .menu-avatar {
         height: 44px;
         width: 44px;
-        background: #fff url(./assets/images/user2.svg) center no-repeat;
+        background: #fff url(./../assets/images/user2.svg) center no-repeat;
         background-size: 60px;
         border-radius: 50px;
         border: solid 2px $card-bg;
@@ -517,80 +502,4 @@ button {
     background: $card-connector-gray;
 }
 
-// Media breakpoints
-@media screen and (max-width: 1268px) {
-    .tree-level-4-wrapper {
-        margin-bottom: 8rem;
-    }
-}
-
-@media only screen and (max-width: 890px) {
-    .card-wrapper {
-        row-gap: 8rem;
-        .card {
-            flex: 0 0 40%;
-        }
-    }
-    .tree-level-2-wrapper {
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        display: flex;
-        flex-flow: row wrap;
-        padding: 0;
-        column-gap: 2rem;
-    }
-    .tree-level-4-wrapper {
-        margin-bottom: 6rem;
-    }
-
-    .tree-level-2-wrapper > li::before {
-        content: none !important;
-    }
-    .tree-level-2-wrapper::before {
-        content: none !important;
-    }
-    .tree-level-1 {
-        &::before {
-            height: 9rem !important;
-        }
-    }
-}
-
-@media only screen and (max-width: 662px) {
-    .mobile-navbar {
-        position: absolute;
-        transform: translateX(-7rem);
-        z-index: 2;
-    }
-    .mobile-menu {
-        display: block;
-    }
-    .card-wrapper {
-        .card {
-            flex: 1;
-        }
-    }
-    .header-container,
-    .filter-container {
-        justify-content: center;
-        padding: 0 10px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .views-wrapper {
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 547px) {
-    .card-wrapper {
-        padding: 15px;
-        margin-inline: auto;
-        max-width: 90%;
-    }
-
-    .card-wrapper .tree-wrapper {
-        padding-inline: 0;
-    }
-}
+@import './breakpoints.scss';

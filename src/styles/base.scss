@@ -1,0 +1,16 @@
+// variables
+$black: #000000;
+$white: #ffffff;
+$primary-color: #ed1b2e;
+$card-border: #bdbdbd;
+$card-bg: #e7e5e4;
+$text-default-color: #343341;
+$plus-color: #777676;
+$card-container: #f6f6f6;
+$card-connector-gray: #ececef;
+
+// Mixins
+@mixin icon-base-color {
+    filter: invert(55%) sepia(0%) saturate(2%) hue-rotate(248deg)
+        brightness(89%) contrast(85%);
+}

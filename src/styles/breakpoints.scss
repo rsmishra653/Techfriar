@@ -1,0 +1,77 @@
+// Media breakpoints
+@media screen and (max-width: 1268px) {
+    .tree-level-4-wrapper {
+        margin-bottom: 8rem;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .card-wrapper {
+        row-gap: 8rem;
+        .card {
+            flex: 0 0 40%;
+        }
+    }
+    .tree-level-2-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+        column-gap: 2rem;
+    }
+    .tree-level-4-wrapper {
+        margin-bottom: 6rem;
+    }
+
+    .tree-level-2-wrapper > li::before {
+        content: none !important;
+    }
+    .tree-level-2-wrapper::before {
+        content: none !important;
+    }
+    .tree-level-1 {
+        &::before {
+            height: 9rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 662px) {
+    .mobile-navbar {
+        position: absolute;
+        transform: translateX(-7rem);
+        z-index: 2;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .card-wrapper {
+        .card {
+            flex: 1;
+        }
+    }
+    .header-container,
+    .filter-container {
+        justify-content: center;
+        padding: 0 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .views-wrapper {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 547px) {
+    .card-wrapper {
+        padding: 15px;
+        margin-inline: auto;
+        max-width: 90%;
+    }
+
+    .card-wrapper .tree-wrapper {
+        padding-inline: 0;
+    }
+}
